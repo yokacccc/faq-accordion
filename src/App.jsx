@@ -1,6 +1,6 @@
 import "./App.css";
-import Question from "./components/question";
-import { useState } from "react";
+import Question from "./components/Question.jsx";
+
 import starIcon from "./assets/images/icon-star.svg";
 
 function App() {
