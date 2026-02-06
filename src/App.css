@@ -1,0 +1,155 @@
+/* 1. 现代盒模型 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. 只清零 body，避免破坏太多默认间距 */
+body {
+    margin: 0;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100dvh;
+}
+
+/* 3. 表单继承字体 */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 4. 图片自适应 */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 5. 导航常用：列表无样式（内容列表可手动加回） */
+nav ul,
+nav ol {
+    list-style: none;
+}
+
+/* 6. 链接基础样式（保留可访问性） */
+a {
+    color: inherit;
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* 7. 可选：按钮重置 */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* 8. 清理标题，段落默认margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+/* ——————————————————————————————Main CSS—————————————————————————————— */
+
+:root {
+    --color-purple-950: #301534;
+    --color-purple-600: #8b6990;
+    --color-purple-100: #f8eeff;
+    --color-violet-600: #ad28eb;
+
+    --text-1-s: 56px;
+    --text-1-h: 66px;
+    --text-1-w: 700;
+    --text-2-s: 18px;
+    --text-2-h: 21px;
+    --text-2-w: 600;
+    --text-3-s: 16px;
+    --text-3-h: 24px;
+    --text-3-w: 400;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background-color: var(--color-purple-100);
+    min-height: 100vh;
+    background-image: url(./images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    font-family: "Work Sans", sans-serif;
+    font-size: var(--text-3-s);
+    color: var(--color-purple-950);
+}
+
+.FAQ-contanier {
+    background-color: white;
+    padding: 24px;
+    margin: 0 24px;
+    border-radius: 8px;
+}
+
+.FAQ-header {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin-bottom: 24px;
+
+    justify-content: start;
+    align-items: center;
+
+    h1 {
+        font-size: 32px;
+        font-weight: var(--text-1-w);
+    }
+}
+
+.FAQ-header__star {
+    width: 24px;
+    height: 24px;
+}
+
+.FAQ-text {
+    display: grid;
+    gap: 24px;
+}
+
+.FAQ-text__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h2 {
+        font-size: var(--text-3-s);
+    }
+
+    button {
+        flex-shrink: 0;
+        margin-left: 24px;
+    }
+}
+
+.FAQ__question:hover {
+    color: var(--color-violet-600);
+}
+
+.decoration-line {
+    border: none;
+    border-top: 1px solid var(--color-purple-100);
+    margin: 24px 0;
+}
