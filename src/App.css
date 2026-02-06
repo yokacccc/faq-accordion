@@ -87,14 +87,14 @@ body {
     display: grid;
     place-content: center;
     background-color: var(--color-purple-100);
-    min-height: 100vh;
-    background-image: url(./images/background-pattern-mobile.svg);
-    background-repeat: no-repeat;
-    background-size: 100%;
 
     font-family: "Work Sans", sans-serif;
     font-size: var(--text-3-s);
     color: var(--color-purple-950);
+
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .FAQ-contanier {
@@ -102,6 +102,7 @@ body {
     padding: 24px;
     margin: 0 24px;
     border-radius: 8px;
+    max-width: 600px;
 }
 
 .FAQ-header {
@@ -152,4 +153,14 @@ body {
     border: none;
     border-top: 1px solid var(--color-purple-100);
     margin: 24px 0;
+}
+
+.answer {
+    color: var(--color-purple-600);
+}
+
+@media (min-width: 768px) {
+    body {
+        background-image: url(./assets/images/background-pattern-desktop.svg);
+    }
 }

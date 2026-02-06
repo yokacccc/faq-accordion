@@ -18,7 +18,7 @@ export default function Question({ question, answer }) {
                 <h2 className="FAQ__question">{question}</h2>
                 <button onClick={handleClick}>{isHidden ? plus : mins}</button>
             </div>
-            {isHidden ? null : <p>{answer}</p>}
+            {isHidden ? null : <p className="answer">{answer}</p>}
         </div>
     );
 }
