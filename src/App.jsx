@@ -1,5 +1,5 @@
 import "./App.css";
-import Question from "./components/Question.jsx";
+import Question from "./components/Question";
 
 import starIcon from "./assets/images/icon-star.svg";
 
